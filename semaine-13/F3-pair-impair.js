@@ -1,3 +1,5 @@
+
+
 // ===== ÉNONCÉ (ne pas modifier) =====
 const enonce = `
 F3 — Pair ou impair : le tirage des tickets (Niveau 1 — Facile)
@@ -19,5 +21,12 @@ Que renvoie -7 % 2 ? Déduis-en pourquoi il vaut mieux tester % 2 !== 0 plutôt 
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-
+ let numeroTicket = 17;
+      numeroTicket = 24;
+      numeroTicket= 0;
+ if (numeroTicket % 2 === 0) {console.log(`Ticket ${numeroTicket} : pair, tu gagnes un tote bag.`);
+}else{
+    console.log(`Ticket ${numeroTicket} : impair, tu gagnes un stylo.`);  
+    console.log 
+}
 
