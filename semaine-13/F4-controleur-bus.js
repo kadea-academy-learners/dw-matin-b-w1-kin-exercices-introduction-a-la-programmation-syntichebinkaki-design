@@ -26,7 +26,7 @@ const statut= age >=18 ? "majeur" : "mineur";
 let tarif;
 if (age < 5){
     tarif= "gratuit"
-}else if(age < 18){
+} else if(age < 18){
     tarif= "500 fc";
 } else {
     tarif = "1000 fc";

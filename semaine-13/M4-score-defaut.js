@@ -22,5 +22,8 @@ Que fait l'opérateur ?? (coalescence des nuls) et en quoi est-il différent de 
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-
-
+``
+const afficherScore =(score) {
+    return `Le score esr : ${score}`;
+}
+console.log(afficherScore(15));
