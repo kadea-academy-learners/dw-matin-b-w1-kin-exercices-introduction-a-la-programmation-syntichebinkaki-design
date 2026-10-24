@@ -21,5 +21,23 @@ Comment classer le bulletin de la meilleure à la moins bonne moyenne avec .sort
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+const etudiants = [
+  { nom: 'Amani', notes: [14, 16, 15] },
+  { nom: 'Bijou', notes: [17, 18, 16] },
+  { nom: 'Christian', notes: [8, 11, 9] },
+  { nom: 'Divine', notes: [12, 10, 14] },
+  { nom: 'Exaucé', notes: [16, 15, 19] }
+];
+
+const bulletin = etudiants.map(e => {
+  let m = e.notes.reduce((a, b) => a + b) / e.notes.length;
+  let mention = m >= 16 ? 'Excellent' : m >= 10 ? 'Admis' : 'Rattrapage';
+  return { nom: e.nom, moyenne: +m.toFixed(1), mention };
+});
+
+console.table(bulletin);
+let admis = bulletin.filter(e => e.mention != 'Rattrapage').length;
+let top = bulletin.find(e => e.mention == 'Excellent');
+console.log(`Admis: ${admis}; Top: ${top.nom}`);
 
 

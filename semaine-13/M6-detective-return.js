@@ -31,15 +31,12 @@ Le troisième bug vient de l'« insertion automatique de point-virgule » (ASI).
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
-const doubler = (n) => { n * 2; };
-console.log(doubler(4));           // undefined ?!
+const doubler = (n) => n * 2;
+console.log(doubler(4)); // 8
 
-const calculerTva = (prix) => { console.log(prix * 0.16); };
+const calculerTva = (prix) => prix * 1.16;
 const total = calculerTva(1000) + 500;
-console.log(total);                // NaN ?!
+console.log(total); // 1660 (ou 660 si return prix * 0.16)
 
-const saluer = (prenom) => {
-  return
-    `Mbote ${prenom}`;
-};
-console.log(saluer('Ney'));        // undefined ?!
+const saluer = (prenom) => `Mbote ${prenom}`;
+console.log(saluer('Ney')); // Mbote Ney
