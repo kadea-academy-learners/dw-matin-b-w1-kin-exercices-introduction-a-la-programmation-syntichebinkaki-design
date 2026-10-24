@@ -19,7 +19,9 @@ Recherche (à rédiger dans RECHERCHES.md) :
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-for (let i =10; i >=1 ; i--){
-    console.log(i)
-}console.log( "Decollage !")
-
+// Étape 1 & 3 : Compte à rebours de 10 à 1 en sautant le 5 (avec continue)
+for (let i = 10; i >= 1; i--) {
+  if (i === 5) continue;
+  console.log(i);
+}
+console.log("Décollage !");
