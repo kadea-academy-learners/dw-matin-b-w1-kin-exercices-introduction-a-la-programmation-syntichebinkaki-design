@@ -20,12 +20,14 @@ console.log(typeof null);
 ```node F1-carte-apprenant.js
 // colle ici le test que tu as exécuté et le résultat obtenu
 
-```console.log(`je suis ${prenom}, j'ai ${age} ans ,et j'habite à ${commune} avec ma famille.`);
-console.log(`${typeof prenom}, ${typeof age}, ${typeof commune}, ${typeof estInscrit}, ${typeof surnom}, ${ancienneFormation}`);
+```console.logconsole.log(`Je m'appelle ${prenom}, j'ai ${age} ans et j'habite à ${commune}.`);
+console.log(typeof prenom, typeof age, typeof commune, typeof estMajeur, typeof adresse, typeof voiture);
+
+
 je suis syntiche, j'ai 20 ans ,et j'habite à ngaliema avec ma famille.
 string, number, string, boolean, undefined, null
-**Source :** 
-META assitant et https://medium.com/@habcerga1/understanding-typeof-null-and-null-instanceof-object-in-javascript-b167e34aa21c
+**Source :** OUI.
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/typeof
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
 ## F2 — Le convertisseur de saisie
@@ -115,6 +117,7 @@ console.log(7 % 2 !== 0);  // true
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```Ticket 17 : impair, tu gagnes un stylo.
+**source :[MDN - Opérateur modulo](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** oui
@@ -215,7 +218,7 @@ console.log( "Decollage !")
     console.log(i)
     10, 9, 8, 7, 6, 4, 3, 2, 1, Décollage !
 
-**Source :** MDN - instruction continue
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/continue
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -416,7 +419,7 @@ console.log(saluer('Ney')); // Mbote Ney
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** MDN Web Docs
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/return
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -497,9 +500,29 @@ Solution : reconvertir en nombre :
 
 **Mon test dans la console :**
 
+console.log(calculerLivraison(3, 2));
+console.log(calculerLivraison(10, 12, true)); 
+console.log(calculerLivraison(20, 5));
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+```const etudiants = [
+  { nom: 'Amani', notes: [14, 16, 15] },
+  { nom: 'Bijou', notes: [17, 18, 16] },
+  { nom: 'Christian', notes: [8, 11, 9] },
+  { nom: 'Divine', notes: [12, 10, 14] },
+  { nom: 'Exaucé', notes: [16, 15, 19] }
+];
+
+const bulletin = etudiants.map(e => {
+  let m = e.notes.reduce((a, b) => a + b) / e.notes.length;
+  let mention = m >= 16 ? 'Excellent' : m >= 10 ? 'Admis' : 'Rattrapage';
+  return { nom: e.nom, moyenne: +m.toFixed(1), mention };
+});
+
+console.table(bulletin);
+let admis = bulletin.filter(e => e.mention != 'Rattrapage').length;
+let top = bulletin.find(e => e.mention == 'Excellent');
+console.log(`Admis: ${admis}; Top: ${top.nom}`);
 
 **Source :** MDN Web Docs - Number.prototype.toFixed()
 
@@ -677,7 +700,7 @@ while (essais > 0) {
 if (essais === 0) alert(`Perdu ! C'était ${cible}`);
 
  console.log(`Perdu ! C'était ${cible}`);
-
+un jeu jouable dans la console du navigateur, qui ne plante jamais, même si on tape « abc ».
 **Source :** Wikipedia/MDN 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non

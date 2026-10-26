@@ -24,10 +24,10 @@ Pourquoi typeof null renvoie-t-il 'object' alors que null n'est pas un objet ?
 const prenom = "Sytche";
 const age = 20;
 const commune = "Gombe";
-let estMajeur = true;
-let adresse = undefined;
-let voiture = null;
+const estInscrit = true;
+let surnom; 
+const ancienneFormation = null; 
 
 console.log(`Je m'appelle ${prenom}, j'ai ${age} ans et j'habite à ${commune}.`);
-console.log(typeof prenom, typeof age, typeof commune, typeof estMajeur, typeof adresse, typeof voiture);
+console.log(typeof prenom, typeof age, typeof commune, typeof estInscrit, typeof surnom, typeof ancienneFormation);
 

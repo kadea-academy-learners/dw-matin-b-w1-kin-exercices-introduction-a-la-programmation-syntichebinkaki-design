@@ -21,21 +21,19 @@ Explique la « recherche dichotomique » et pourquoi 7 essais suffisent toujours
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-let cible = Math.floor(Math.random() * 100) + 1;
-let essais = 7;
+let cible = 1 + Math.floor(Math.random() * 100);
+let essais = 0;
 
-while (essais > 0) {
-  let saisie = prompt(`Essais: ${essais}. Devine (1-100)`);
-  let n = Number(saisie);
-  if (isNaN(n)) continue;
-
-  essais--;
-  if (n === cible) {
-    alert(`Géant ! ${7-essais} essais`);
+while (essais < 7) {
+  let saisie = Number(prompt("Devine le nombre (1-100) :"));
+  if (isNaN(saisie)) continue;
+  essais++;
+  if (saisie < cible) console.log("Plus grand !");
+  else if (saisie > cible) console.log("Plus petit !");
+  else {
+    console.log(`Trouvé en ${essais} essais !`);
     break;
   }
-  alert(n < cible ? 'Plus grand' : 'Plus petit');
 }
-
-if (essais === 0) alert(`Perdu ! C'était ${cible}`);
+if (essais === 7 && saisie !== cible) console.log(`Perdu ! C'était ${cible}.`);
 
